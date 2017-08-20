@@ -39,6 +39,7 @@
                 <h2>
                     <p>Welcome to your iView app!</p>
                     <p>git 第二次提交</p>
+                    <p>var var var</p>
                     <Button type="ghost" @click="handleStart">Start iView</Button>
                 </h2>
                 <h3></h3>
