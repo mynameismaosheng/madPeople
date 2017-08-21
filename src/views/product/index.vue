@@ -1,38 +1,87 @@
+<style>
+.Cardcon{
+    width:320px;
+    display:inline-block;
+}
+.Cardcon > div{
+    text-align:center
+}
+.commodity{
+    width:286px
+}
+</style>
+
 <template>
     <Row>
         <i-col span="5">
-            <Menu active-name="1-2" width="auto" :open-names="['1']">
-                <Submenu name="1">
+            <Menu active-name="maleClothes" @on-select="mainNav" width="auto" :open-names="['clothes']">
+                <Submenu name="clothes">
                     <template slot="title">
-                        <Icon type="ios-navigate"></Icon>
-                        导航一
+                        <Icon type="tshirt"></Icon>
+                        衣服
                     </template>
-                    <Menu-item name="1-1">选项 1</Menu-item>
-                    <Menu-item name="1-2">选项 2</Menu-item>
-                    <Menu-item name="1-3">选项 3</Menu-item>
+                    <Menu-item name="maleClothes">男衣</Menu-item>
+                    <Menu-item name="womenClothes">女衣</Menu-item>
+                    <Menu-item name="childClothes">童衣</Menu-item>
                 </Submenu>
-                <Submenu name="2">
+                <Submenu name="tight">
                     <template slot="title">
-                        <Icon type="ios-keypad"></Icon>
-                        导航二
+                        <Icon type="ios-paw"></Icon>
+                        贴身
                     </template>
-                    <Menu-item name="2-1">选项 1</Menu-item>
-                    <Menu-item name="2-2">选项 2</Menu-item>
+                    <Menu-item name="shoesSocks">鞋袜</Menu-item>
+                    <Menu-item name="underwear">内衣</Menu-item>
+                    <Menu-item name="pajamas">睡衣</Menu-item>
                 </Submenu>
-                <Submenu name="3">
+                <Submenu name="decorate">
                     <template slot="title">
-                        <Icon type="ios-analytics"></Icon>
-                        导航三
+                        <Icon type="closed-captioning"></Icon>
+                        装饰
                     </template>
-                    <Menu-item name="3-1">选项 1</Menu-item>
-                    <Menu-item name="3-2">选项 2</Menu-item>
+                    <Menu-item name="3-1">包</Menu-item>
+                    <Menu-item name="3-2">表</Menu-item>
                 </Submenu>
             </Menu>
         </i-col>
         <i-col span="19">
             <div class="layout-content-main">
-                <router-view> </router-view>
+                <Card class="Cardcon" v-for="item in productList" :key="item">
+                    <div>
+                        <img class="commodity" :src="item.imgSrc">
+                        <h3>{{item.name}}</h3>
+                    </div>
+                </Card>
             </div>
         </i-col>
     </Row>
 </template>
+<script>
+import axios from 'axios';
+export default {
+    data() {
+        return {
+            // productList: {
+            //     clothes: [],
+            //     tight: [],
+            //     decorate: []
+            // }
+            productList:[]
+        }
+    },
+    methods: {
+        mainNav(name) {
+            let _self = this;
+            axios.get('productData.json',{
+                    params:{
+                        type:name
+                }
+            }).then(function (res) {
+                if (res.status === 200) {
+                    _self.productList = res.data.decorate;
+                    // [_self.clothes, _self.decorate, _self.tight] = [res.data.clothes,  res.data.decorate, res.data.tight];
+                }
+            })
+        }
+    }
+}
+</script>

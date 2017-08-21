@@ -1,0 +1,56 @@
+{
+    "clothes":[
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        }
+    ],
+    "tight":[
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        }
+    ],
+    "decorate":[
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌1"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌2"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌3"
+        },
+        {
+            "imgSrc" : "src/images/underwear1.png",
+            "name"   : "名牌4"
+        }
+    ]
+}

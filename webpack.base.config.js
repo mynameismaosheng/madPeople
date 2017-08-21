@@ -1,4 +1,5 @@
 const path = require('path');
+const jquery = require('jquery');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -16,7 +17,6 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-
                         css: ExtractTextPlugin.extract({
                             use: ['css-loader', 'autoprefixer-loader'],
                             fallback: 'vue-style-loader'

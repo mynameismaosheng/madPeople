@@ -5,6 +5,10 @@ const routers = [{
     },
     children:[
         {
+            path:'/',
+            component: (resolve) => require(['./views/product/'], resolve)
+        },
+        {
             path:'/product',
             component: (resolve) => require(['./views/product/'], resolve)
         },

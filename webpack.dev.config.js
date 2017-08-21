@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const jquery = require('jquery');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
