@@ -2,10 +2,10 @@ import axios from 'axios';
 import env from '../config/env';
 
 let util = {
-
+    
 };
 util.title = function(title) {
-    title = title ? title + ' - Home' : 'iView project';
+    title = title ? title + ' - Home' : 'mad-people';
     window.document.title = title;
 };
 
