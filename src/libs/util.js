@@ -5,7 +5,7 @@ let util = {
     
 };
 util.title = function(title) {
-    title = title ? title + ' - Home' : 'mad-people';
+    title = title ? title + ' - Home' : '疯男风女';
     window.document.title = title;
 };
 

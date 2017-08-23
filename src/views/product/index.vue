@@ -14,7 +14,7 @@
 <template>
     <Row>
         <i-col span="5">
-            <Menu active-name="maleClothes" @on-select="mainNav" width="auto" :open-names="['clothes']">
+            <Menu :active-name="openName" @on-select="mainNav" width="auto" :open-names="['clothes']">
                 <Submenu name="clothes">
                     <template slot="title">
                         <Icon type="tshirt"></Icon>
@@ -45,10 +45,11 @@
         </i-col>
         <i-col span="19">
             <div class="layout-content-main">
-                <Card class="Cardcon" v-for="item in productList" :key="item">
+                <Card class="Cardcon" v-for="item in productList" :key="item.name">
                     <div>
                         <img class="commodity" :src="item.imgSrc">
                         <h3>{{item.name}}</h3>
+                        <p>{{item.name}}</p>
                     </div>
                 </Card>
             </div>
@@ -60,28 +61,31 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            // productList: {
-            //     clothes: [],
-            //     tight: [],
-            //     decorate: []
-            // }
+            openName : 'maleClothes',
             productList:[]
         }
-    },
-    methods: {
+    }
+    ,methods: {
         mainNav(name) {
-            let _self = this;
-            axios.get('productData.json',{
-                    params:{
-                        type:name
-                }
-            }).then(function (res) {
-                if (res.status === 200) {
-                    _self.productList = res.data.decorate;
-                    // [_self.clothes, _self.decorate, _self.tight] = [res.data.clothes,  res.data.decorate, res.data.tight];
-                }
-            })
+            getLists(this,name);
         }
     }
+    ,created(){
+        let _self = this;
+        getLists(_self,_self.openName);
+    }
+}
+function getLists(_self,name){
+    name =  name ? name : '';
+    axios.get('productData.json',{
+        params:{
+            type:name
+        }
+    }).then(function (res) {
+        if (res.status === 200) {
+            _self.productList = res.data[name];
+            // [_self.clothes, _self.decorate, _self.tight] = [res.data.clothes,  res.data.decorate, res.data.tight];
+        }
+    })
 }
 </script>

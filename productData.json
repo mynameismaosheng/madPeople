@@ -1,55 +1,65 @@
 {
     "clothes":[
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
-        },
+        }
+    ],
+    "maleClothes":[
+        {
+            "imgSrc" : "src/images/cat.png",
+            "name"   : "男衣"
+        }
+    ],
+    "womenClothes":[
         {
             "imgSrc" : "src/images/underwear1.png",
-            "name"   : "名牌1"
-        },
+            "name"   : "女衣"
+        }
+    ],
+    "childClothes":[
         {
-            "imgSrc" : "src/images/underwear1.png",
-            "name"   : "名牌1"
+            "imgSrc" : "src/images/cat.png",
+            "name"   : "童装"
         }
     ],
     "tight":[
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         }
     ],
     "decorate":[
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌1"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌2"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌3"
         },
         {
-            "imgSrc" : "src/images/underwear1.png",
+            "imgSrc" : "src/images/cat.png",
             "name"   : "名牌4"
         }
     ]
